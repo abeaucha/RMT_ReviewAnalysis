@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# ==============================================================================
+#
+# This is a script to execute data gathering and data cleaning R scripts
+# to acquire and clean web data for a restaurant's online reviews and ratings.
+#
+# Author: Antoine Beauchamp
+# Edited: April 6th, 2017
+# Created: March 2017
+#
+# =============================================================================
+
+printf "Running RMTDataGathering.R. Beginning web scraping.\n"
+
+RScript RMTDataGathering.R
+
+printf "Data gathering complete.\nRaw data has been saved to ./Data/RMTRawData.RData \n"
+
+printf "Running RMTDataCleaning.R. Beginning data cleaning process.\n"
+
+RScript RMTDataCleaning.R > RMTGatherClean.log
+
+printf "Data cleaning complete.\nClean data has been saved to ./Data/RMTCleanData.csv \n"

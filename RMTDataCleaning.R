@@ -1,7 +1,6 @@
 ###########################HEADER####################################
 #
-# Capstone Project: Data Cleaning
-# Springboard Foundations of Data Science
+# RMT Review Analysis: RMTDataCleaning.R
 #
 # The purpose of this program is to clean the raw data acquired
 # from the web scraping process in DataGathering.R. 
@@ -17,7 +16,7 @@
 
 ################## INTRO #######################
 
-CapstoneDir = "/Users/Antoine/Documents/Work/DataScience/Springboard/FoundationsofDataScience/CapstoneProject/CapstoneDeliverables"
+CapstoneDir = "/Users/Antoine/Documents/Work/DataScience/Projects/RMT_ReviewAnalysis/"
 
 setwd(CapstoneDir)
 
@@ -29,7 +28,7 @@ suppressMessages(library(dplyr))
 library(tidyr)
 suppressMessages(library(readr))
 
-load("./Data/CapstoneRawData_032017.RData")
+load("./Data/RMTRawData.RData")
 
 str(YelpData)
 str(OpenTableData)
@@ -241,7 +240,7 @@ subset(RawDF$Reviews,RawDF$Website=="Zomato")
 
 
 #Write clean data to .csv file.
-write_csv(RawDF, "./Data/CapstoneCleanData.csv")
+write_csv(RawDF, "./Data/RMTCleanData.csv")
 
 
 #End.

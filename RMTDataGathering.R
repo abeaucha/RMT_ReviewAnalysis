@@ -1,10 +1,9 @@
 ############################################################
 #
-# Capstone Project: Data Gathering 
-# Springboard Foundations of Data Science
+# RMT Analysis: RMTDataGathering.R
 #
-# The purpose of this program is to scrape data from the web 
-# for popular review and travel websites. 
+# The purpose of this program is to scrape data for REDS
+# Midtown Tavern from popular review and travel websites. 
 # This script will scrape ratings, reviews, and dates.
 #
 # Author: Antoine Beauchamp. 
@@ -14,7 +13,7 @@
 #############################################################
 
 
-CapstoneDir = "/Users/Antoine/Documents/Work/DataScience/Springboard/FoundationsofDataScience/CapstoneProject/CapstoneDeliverables"
+CapstoneDir = "/Users/Antoine/Documents/Work/DataScience/Projects/RMT_ReviewAnalysis/"
 
 setwd(CapstoneDir)
 
@@ -266,5 +265,5 @@ DineDate <- todayDate - dineDay
 OpenTableData$Dates[DatesLogic] <- DineDate
 
 #Save raw data to file
-save(YelpData,OpenTableData,TripAdData,ZomatoData, file="./Data/CapstoneRawData.RData")
+save(YelpData,OpenTableData,TripAdData,ZomatoData, file="./Data/RMTRawData.RData")
 

@@ -4,19 +4,18 @@ author: "Antoine Beauchamp"
 date: "April 6th, 2017"
 output: 
   pdf_document:
-    template: CapstoneTemplate.tex
+    template: RMTTemplate.tex
     latex_engine: xelatex
     toc: true
     toc_depth: 3
     number_sections: true
     includes:
-      in_header: CapstoneHeader.sty
+      in_header: RMTHeader.sty
     highlight: tango
 fontsize: 11pt
 indent: 2pt
 geometry: top=1in
 documentclass: article
-subtitle: "Foundations of Data Science: Capstone Project Report"
 ---
 
 
@@ -73,7 +72,7 @@ This report is divided into five primary sections. In [Section 2](#S2), I will e
 
 
 ```{r working dir, echo=FALSE}
-CapstoneDir = "/Users/Antoine/Documents/Work/DataScience/Springboard/FoundationsofDataScience/CapstoneProject/Deliverables"
+CapstoneDir = "/Users/Antoine/Documents/Work/DataScience/Projects/RMT_ReviewAnalysis/"
 
 setwd(CapstoneDir)
 
@@ -947,7 +946,7 @@ CapstoneDF$Reviews <- gsub(" +Rated *","",CapstoneDF$Reviews)
 \ni We will finish off the section by writing our newly-cleaned data to file. 
 
 ```{r}
-write_csv(CapstoneDF, "./Data/CapstoneCleanData.csv")
+write_csv(CapstoneDF, "./Data/RMTCleanData.csv")
 ```
 
 \ni This completes the cleaning stage. We are now ready to analyze the data and derive some insights.
@@ -964,7 +963,7 @@ library(readr)
 library(dplyr)
 library(tidyr)
 #Read in clean data
-CapstoneDF <- read_csv("./Data/CapstoneCleanData.csv")
+CapstoneDF <- read_csv("./Data/RMTCleanData.csv")
 #Summary of data frame
 glimpse(CapstoneDF)
 ```
