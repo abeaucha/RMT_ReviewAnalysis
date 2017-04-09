@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# ==============================================================================
+#
+# This is a script to execute data gathering and data cleaning R scripts
+# to acquire and clean web data for a restaurant's online reviews and ratings.
+#
+# Author: Antoine Beauchamp
+# Edited: April 6th, 2017
+# Created: March 2017
+#
+# =============================================================================
+
+printf "Running DataGathering.R. Beginning web scraping.\n"
+
+RScript DataGathering.R
+
+printf "Data gathering complete.\nRaw data has been saved to ./Data/CapstoneRawData.RData \n"
+
+printf "Running DataCleaning.R. Beginning data cleaning process.\n"
+
+RScript DataCleaning.R > CapstoneGatherClean.log
+
+printf "Data cleaning complete.\nClean data has been saved to ./Data/CapstoneCleanData.csv \n"

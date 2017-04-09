@@ -1,0 +1,94 @@
+
+|-------------------------------------------------------------------------------
+|
+| Capstone Project: REDS Midtown Tavern Online Review Analytics
+| Springboard: Foundations of Data Science
+| Author: Antoine Beauchamp
+| Date: April 6th, 2017 
+|
+| Project Directory: FoundationsofDataSciece/CapstoneProject/CapstoneDeliverables 
+|
+|-------------------------------------------------------------------------------
+
+|--------------------------- Project Overview ----------------------------------
+
+The purpose of this project is to analyze the online review data for the 
+restaurant REDS Midtown Tavern, located in Toronto, Ontario, in order to 
+deliver data-founded actionable insights regarding customers' experience of
+the restaurant. The data sources used are Yelp, OpenTable, TripAdvisor, and 
+Zomato. 
+
+The deliverables for this project include a project report and a slide deck. 
+
+This project has been performed as part of the Foundations of Data Science
+course delivered by Springboard.
+
+
+|------------------------------ Directories ------------------------------------
+
+
+./Data/: 
+Directory containing raw and clean data
+
+./Images/: 
+Directory containing images used in project report and slide deck
+
+./Plots/: 
+Directory containing plots generated as part of data analysis
+
+
+
+|-------------------------------- Programs ------------------------------------
+
+CapstoneGatherClean: 
+Bash script to run data gathering and data cleaning R scripts
+
+
+DataGathering.R:
+R script that uses rvest package to scrape reviews, ratings and dates from Yelp, 
+OpenTable, TripAdvisor and Zomato. Outputs raw data to ./Data/CapstoneRawData.RData
+
+
+DataCleaning.R:
+R script used to clean raw data contained in ./Data/CapstoneRawData.RData. 
+Outputs clean data to ./Data/CapstoneCleanData.csv
+
+
+RMTAnalysis.R:
+Script used to analyze clean customer review data and generate plots for
+presentation. Analysis includes time-series analysis of ratings and text
+analysis of customer reviews.
+
+
+
+|------------------------------ Project Report -------------------------------
+
+
+CapstoneHeader.sty:
+Header file for formatting project report
+
+CapstoneTemplate.tex:
+LaTeX template for project report
+
+CapstoneProjectReport.Rmd:
+Raw R Markdown file for project report
+
+CapstoneProjectReport.pdf:
+Rendered PDF file for project report
+
+
+|-------------------------------- Slide Deck --------------------------------
+
+
+CapstoneSlideDeck.key:
+Keynote file for project slide deck
+
+CapstoneSlideDeck.pdf:
+PDF file for project slide deck
+
+
+
+
+
+
+
